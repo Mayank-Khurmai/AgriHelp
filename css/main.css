@@ -1,1 +1,38 @@
-@cg=harset
+@charset "UTF-8";
+
+*{
+    box-sizing: border-boxś;
+    }
+
+body{
+    padding: 0;
+    margin: 0;
+    }
+
+.google-black-font{
+    font-family: 'Black Ops One', cursive;
+    font-size: 30px;
+    }
+
+.top-menu{
+    background-color: rgba(255,255,255,0.1);
+    box-shadow:0px 8px 8px 0px #ddd;
+    }
+    
+#li-heading{
+        font-size: 20px;
+        font-weight: bold;
+        color: black;
+        font-family: sans-serif;
+        line-height: 40px;
+    }
+
+.anchor{
+    text-decoration: none;
+    color: white;
+    }
+
+.about-img{
+    width: 25%;
+    }
+
