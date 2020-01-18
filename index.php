@@ -1,7 +1,1 @@
-<!DOCTYPE html>
-<html>
-  <body>
-    hii
-  </body>
-
-</html>
+var mailcheck = $("#usermailid").val();
