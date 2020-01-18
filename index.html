@@ -67,7 +67,8 @@
                                                             <i class="fa fa-user" style="font-size: 30px;"></i>
                                                         </span>
                                                      </div>
-                                                    <input type="text" id="username" class="form-control" placeholder="Full Name" required="required">
+                                                    <input type="text" id="username" oninput="checkname();" class="form-control" placeholder="Full Name" required="required">
+                                                    <span id="spanname"></span>
                                                 </div>
 
                                                 <div class="input-group my-4">
@@ -76,8 +77,8 @@
                                                                 <i class="fa fa-envelope" style="font-size: 30px;"></i>
                                                             </span>
                                                          </div>
-                                                        <input type="email" name="useremail" id="usermailid" class="form-control" placeholder="Email" required="required">
-                                                        <span id="checkspan">a</span>
+                                                        <input type="email" id="useremail" oninput="checkemail();" class="form-control" placeholder="Email" required="required">
+                                                        <span id="spanemail"></span>
                                                 </div>
 
                                                 <div class="input-group my-4">
@@ -86,8 +87,9 @@
                                                                 <i class="fa fa-phone" style="font-size: 30px;"></i>
                                                             </span>
                                                          </div>
-                                                        <input type="number" name="usermobile" class="form-control" placeholder="Mobile Number" required="required">
-                                                </div>
+                                                        <input type="number" id="usernumber" oninput="checknumber();" class="form-control" placeholder="Mobile Number" required="required">
+                                                        <span id="spannumber"></span>
+                                               </div>
 
                                                 <div class="input-group my-4">
                                                         <div class="input-group-prepend">
@@ -95,28 +97,48 @@
                                                                     <i class="fa fa-user" style="font-size: 30px;"></i>
                                                                 </span>
                                                         </div>
-                                                    <span class="mx-4 py-2 radio-input-span form-control"><input type="radio" name="usergender">&nbsp;&nbsp;Male</span>
-                                                    <span class="mx-4 py-2 radio-input-span form-control"><input type="radio" name="usergender">&nbsp;&nbsp;Female</span>
+                                                    <span class="mx-4 py-2 radio-input-span form-control"><input type="radio" checked id="male" required="required" name="usergender">&nbsp;&nbsp;Male</span>
+                                                    <span class="mx-4 py-2 radio-input-span form-control"><input type="radio" id="female" required="required" name="usergender">&nbsp;&nbsp;Female</span>
                                             
                                                    </div>
                                                 
 
-                                                <div class="input-group my-4">
+                                                <div class="input-group my-4" required>
                                                         
-                                                        <select class="form-control">
-                                                            <option disabled>State</option>
-                                                            <option>Rajasthan</option>
-                                                            <option>Uttar Pradesh</option>
-                                                            <option>Delhi</option>
-                                                            <option>Karnatka</option>
+                                                        <select id="userstate" class="form-control">
+                                                                <option value="">Select State</option>
+                                                                <option value="Delhi">Delhi</option>
+                                                                <option value="Punjab">Punjab</option>
+                                                                <option value="Rajasthan">Rajasthan</option>
+                                                                <option value="Kashmir">Kashmir</option>
+                                                                <option value="Laddhak">Laddhak</option>
+                                                                <option value="Assam">Assam</option>
+                                                                <option value="Mizoram">Mizoram</option>
+                                                                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                                                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                                                <option value="Goa">Goa</option>
+                                                                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                                                <option value="Kerala">Kerala</option>
+                                                                <option value="West Bengal">West Bengal</option>
+                                                                <option value="Karnatka">Karnatka</option>
+                                                                <option value="Maharastra">Maharastra</option>
+                                                                <option value="Haryana">Haryana</option>
+                                                                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                                                <option value="Gujarat">Gujarat</option>
+                                                                <option value="Chattisgarh">Chattisgarh</option>
+                                                                <option value="Uttrakhand">Uttrakhand</option>
+                                                                <option value="Jharkhand">Jharkhand</option>
+                                                                <option value="Sikkhim">Sikkhim</option>
+                                                                <option value="Meghalaya">Meghalaya</option>
+                                                                <option value="Telangana">Telangana</option>
                                                         </select>
 
-                                                        <select class="form-control">
-                                                                <option>District</option>
-                                                                <option>Ghaziabad</option>
-                                                                <option>Saharnpur</option>
-                                                                <option>Aligarh</option>
-                                                                <option>Hapur</option>
+                                                        <select class="form-control" id="userdistrict">
+                                                                <option value="">District</option>
+                                                                <option value="Ghaziabad">Ghaziabad</option>
+                                                                <option value="Saharnpur">Saharnpur</option>
+                                                                <option value="Aligarh">Aligarh</option>
+                                                                <option value="Hapur">Hapur</option>
                                                             </select>
                                                         
                                                 </div>
@@ -127,7 +149,8 @@
                                                                 <i class="fa fa-key" style="font-size: 30px;"></i>
                                                             </span>
                                                          </div>
-                                                        <input type="password" name="userpass" class="form-control" placeholder="Password" required="required">
+                                                        <input type="password" id="userpass" oninput="checkpass();" class="form-control" placeholder="Password" required="required">
+                                                        <span id="spanpass"></span>
                                                 </div>
 
                                                 <div class="input-group my-4">
@@ -136,11 +159,15 @@
                                                                 <i class="fa fa-key" style="font-size: 30px;"></i>
                                                             </span>
                                                          </div>
-                                                        <input type="password" id="userconfirmpass" class="form-control" placeholder=" Confirm Password" required="required">
-                                                </div>
-                                                    
-                    
-                                                        <input type="submit" value="Register" class="form-control mb-4" style="width: 35%; float: right;">
+                                                        <input type="password" id="usercpass" oninput="checkpass();" class="form-control" placeholder=" Confirm Password" required="required">
+                                                        <span id="spancpass"></span>
+                                               </div>
+                                               
+                                                <input type="submit" value="Register" id="register-btn"  class="form-control mb-4" style="width: 35%; float: right; cursor: pointer;">
+
+                                                <div class="alert border py-2 px-1 w-50 bg-warning d-none" id="register-alert">
+                                                        <b>Registration Succeessful !</b>
+                                                    </div> 
                                             </form>
                                     </div>
                     
@@ -352,9 +379,73 @@
 
 
 <script>
-$(document).ready(function(){
-    $("#usermailid").on("change", function(){
-        var mailcheck = $("#usermailid").val();
+
+
+function checkpass()
+{
+    var a = document.getElementById("userpass").value;
+    var b = document.getElementById("usercpass").value;
+    if( a == b)
+    {
+        document.getElementById("spanpass").innerHTML = "<i class='fa fa-check'></i>";
+        document.getElementById("spancpass").innerHTML = "<i class='fa fa-check'></i>";
+    }
+    else
+    {
+        document.getElementById("spancpass").innerHTML = "<i class='fa fa-times'></i>";
+        document.getElementById("spanpass").innerHTML = "<i class='fa fa-check'></i>";
+    }
+}
+
+
+
+function checkname()
+{
+    var a = document.getElementById("username").value;
+    if( a == "")
+    {
+        document.getElementById("spanname").innerHTML = "<i class='fa fa-times'></i>";
+    }
+    else
+    {
+        document.getElementById("spanname").innerHTML = "<i class='fa fa-check'></i>";
+    }
+}
+
+
+function checknumber()
+{
+    var a = document.getElementById("usernumber").value;
+    if( a == "")
+    {
+        document.getElementById("spannumber").innerHTML = "<i class='fa fa-times'></i>";
+    }
+    else
+    {   
+        if(a.length<10)
+        {
+            document.getElementById("spannumber").innerHTML = "<i class='fa fa-times'></i>";
+        }
+        else
+        {
+            document.getElementById("spannumber").innerHTML = "<i class='fa fa-check'></i>";
+        }
+        
+    }
+}
+
+
+function checkemail()
+{
+    var a = document.getElementById("useremail").value;
+    if( a == "")
+    {
+        document.getElementById("spanemail").innerHTML = "<i class='fa fa-times'></i>";
+    }
+    else
+    {
+        $("#useremail").on("change", function(){
+        var mailcheck = $("#useremail").val();
         $.ajax({
             type : "POST",
             url : "php/checkuser.php",
@@ -362,31 +453,100 @@ $(document).ready(function(){
                     checkemail : mailcheck
                     },
             success : function(event){
-                         $("#checkspan").html(event);
+                         $("#spanemail").html(event);
                     }
         });
     });
-});
+    }
+}
 
 
 
 $(document).ready(function(){
-    $("#usermailid").on("submit", function(){
-        var mailcheck = $("#username").val();
-        var mailcheck = $("#usermailid").val();
-        var mailcheck = $("#usermailid").val();
-        var mailcheck = $("#usermailid").val();
-        var mailcheck = $("#usermailid").val();
-        $.ajax({
-            type : "POST",
-            url : "php/checkuser.php",
-            data : {
-                    checkemail : mailcheck
-                    },
-            success : function(event){
-                         $("#checkspan").html(event);
+    $("#register-btn").on("click", function(){
+        var username = $("#username").val();
+        var useremail = $("#useremail").val();
+        var usernumber = $("#usernumber").val();
+        var usergender= "Male";
+        if(document.getElementById("female").checked == true)
+        {
+            usergender = "Female";
+        }
+        var userstate = $("#userstate").val();
+        var userdistrict = $("#userdistrict").val();
+        var userpass= $("#userpass").val();
+        var usercpass = $("#usercpass").val();
+        if(username != "")
+         {
+            if(useremail != "")
+            {
+                if(usernumber !="")
+                {
+                    if( userstate !="")
+                    {
+                        if(userdistrict != "")
+                        {
+                            if(userpass != "")
+                            {
+                                if(usercpass != "")
+                                {
+                                        $.ajax({
+                                            type : "POST",
+                                            url : "php/register.php",
+                                            data : {
+                                                    username : username,
+                                                    useremail : useremail,
+                                                    usernumber : usernumber,
+                                                    usergender : usergender,
+                                                    userstate : userstate,
+                                                    userdistrict : userdistrict,
+                                                    userpass : userpass
+                                                    },
+                                            success : function(event){
+                                                        alert(event);
+                                                        document.getElementById("register-alert").style.display = "block !important";
+                                                        setTimeout(function(){
+                                                            document.getElementById("register-alert").style.display = "none !important";
+                                                            document.getElementById("login").click();
+                                                        }, 3000)
+                                                    }
+                                            return false;
+                                        });
+                                }
+                                else
+                                {
+                                    alert("Fill C pass");
+                                }
+                            }
+                            else
+                            {
+                                alert("Fill Pass");
+                            }
+                        }
+                        else
+                        {
+                            alert("Choose District");
+                        }
                     }
-        });
+                    else
+                    {
+                        alert("Choose State");
+                    }
+                }
+                else
+                {
+                    alert("Fill Mobile Number");
+                }
+            }
+            else
+            {
+                alert("Fill User Email");
+            }
+         }
+        else{
+            alert("Fill Username");
+        }
+        
     });
 });
 
