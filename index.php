@@ -2,7 +2,9 @@
 <html lang="en-US">
 <head>
     <title>AgriHelp Portal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/main2.css">
     <link rel="stylesheet" href="css/all.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/responsive.css">
@@ -16,172 +18,14 @@
 <body>
 
 
-<!-- Modal Coding Start-->
 
-<div class="modadl" id="mymodal">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header bg-dark text-light">
-                    Login/Register to Explore more..
-                    <i class="fa fa-times ml-auto" data-dismiss="modal" style="font-size: 30px; color: red; cursor: pointer;"></i>
-                </div>
-                <div class="modal-body">
-                        <div class="container-fluid">
-                                <ul class="nav nav-tabs" role="tablist">
-                                    <li class="nav-item"><a href="#login" class="nav-link active" data-toggle="tab">Login</a></li>
-                                    <li class="nav-item"><a href="#register" class="nav-link" data-toggle="tab">Register</a></li>
-                                </ul>ycycy
-                    
-                                <div class="tab-content">
-                                    
-                                    <div id="login" class="container tab-pane active mt-3">
-                                       
-                                        <form>
-                                        <div class="input-group  my-4">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text">
-                                                    <i class="fa fa-user" style="font-size: 30px;"></i>
-                                                </span>
-                                             </div>
-                                            <input type="text" name="username" class="form-control" placeholder="Username or Email" required="required">
-                                        </div>
-                    
-                                        <div class="input-group my-4">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text">
-                                                        <i class="fa fa-key" style="font-size: 30px;"></i>
-                                                    </span>
-                                                 </div>
-                                                <input type="password" name="username" class="form-control" placeholder="Password" required="required">
-                                            </div>
-                                            
-                                             <input type="submit" value="Login" class="form-control mb-4" style="width: 35%; float: right;">
-                                    </form>
-                                    </div>
-                    
-                                    <div id="register" class="container tab-pane pb-4">
-                                            <form>
-                                            <div class="input-group  my-4">
-                                                    <div class="input-group-prepend">
-                                                        <span class="input-group-text">
-                                                            <i class="fa fa-user" style="font-size: 30px;"></i>
-                                                        </span>
-                                                     </div>
-                                                    <input type="text" id="username" oninput="checkname();" class="form-control" placeholder="Full Name" required="required">
-                                                    <span id="spanname"></span>
-                                                </div>
+<!--Side Microphone Coding Start-->
 
-                                                <div class="input-group my-4">
-                                                        <div class="input-group-prepend">
-                                                            <span class="input-group-text">
-                                                                <i class="fa fa-envelope" style="font-size: 30px;"></i>
-                                                            </span>
-                                                         </div>
-                                                        <input type="email" id="useremail" oninput="checkemail();" class="form-control" placeholder="Email" required="required">
-                                                        <span id="spanemail"></span>
-                                                </div>
-
-                                                <div class="input-group my-4">
-                                                        <div class="input-group-prepend">
-                                                            <span class="input-group-text">
-                                                                <i class="fa fa-phone" style="font-size: 30px;"></i>
-                                                            </span>
-                                                         </div>
-                                                        <input type="number" id="usernumber" oninput="checknumber();" class="form-control" placeholder="Mobile Number" required="required">
-                                                        <span id="spannumber"></span>
-                                               </div>
-
-                                                <div class="input-group my-4">
-                                                        <div class="input-group-prepend">
-                                                                <span class="input-group-text">
-                                                                    <i class="fa fa-user" style="font-size: 30px;"></i>
-                                                                </span>
-                                                        </div>
-                                                    <span class="mx-4 py-2 radio-input-span form-control"><input type="radio" checked id="male" required="required" name="usergender">&nbsp;&nbsp;Male</span>
-                                                    <span class="mx-4 py-2 radio-input-span form-control"><input type="radio" id="female" required="required" name="usergender">&nbsp;&nbsp;Female</span>
-                                            
-                                                   </div>
-                                                
-
-                                                <div class="input-group my-4" required>
-                                                        
-                                                        <select id="userstate" class="form-control">
-                                                                <option value="">Select State</option>
-                                                                <option value="Delhi">Delhi</option>
-                                                                <option value="Punjab">Punjab</option>
-                                                                <option value="Rajasthan">Rajasthan</option>
-                                                                <option value="Kashmir">Kashmir</option>
-                                                                <option value="Laddhak">Laddhak</option>
-                                                                <option value="Assam">Assam</option>
-                                                                <option value="Mizoram">Mizoram</option>
-                                                                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
-                                                                <option value="Uttar Pradesh">Uttar Pradesh</option>
-                                                                <option value="Goa">Goa</option>
-                                                                <option value="Madhya Pradesh">Madhya Pradesh</option>
-                                                                <option value="Kerala">Kerala</option>
-                                                                <option value="West Bengal">West Bengal</option>
-                                                                <option value="Karnatka">Karnatka</option>
-                                                                <option value="Maharastra">Maharastra</option>
-                                                                <option value="Haryana">Haryana</option>
-                                                                <option value="Himachal Pradesh">Himachal Pradesh</option>
-                                                                <option value="Gujarat">Gujarat</option>
-                                                                <option value="Chattisgarh">Chattisgarh</option>
-                                                                <option value="Uttrakhand">Uttrakhand</option>
-                                                                <option value="Jharkhand">Jharkhand</option>
-                                                                <option value="Sikkhim">Sikkhim</option>
-                                                                <option value="Meghalaya">Meghalaya</option>
-                                                                <option value="Telangana">Telangana</option>
-                                                        </select>
-
-                                                        <select class="form-control" id="userdistrict">
-                                                                <option value="">District</option>
-                                                                <option value="Ghaziabad">Ghaziabad</option>
-                                                                <option value="Saharnpur">Saharnpur</option>
-                                                                <option value="Aligarh">Aligarh</option>
-                                                                <option value="Hapur">Hapur</option>
-                                                            </select>
-                                                        
-                                                </div>
-                            
-                                                <div class="input-group my-4">
-                                                        <div class="input-group-prepend">
-                                                            <span class="input-group-text">
-                                                                <i class="fa fa-key" style="font-size: 30px;"></i>
-                                                            </span>
-                                                         </div>
-                                                        <input type="password" id="userpass" oninput="checkpass();" class="form-control" placeholder="Password" required="required">
-                                                        <span id="spanpass"></span>
-                                                </div>
-
-                                                <div class="input-group my-4">
-                                                        <div class="input-group-prepend">
-                                                            <span class="input-group-text">
-                                                                <i class="fa fa-key" style="font-size: 30px;"></i>
-                                                            </span>
-                                                         </div>
-                                                        <input type="password" id="usercpass" oninput="checkpass();" class="form-control" placeholder=" Confirm Password" required="required">
-                                                        <span id="spancpass"></span>
-                                               </div>
-                                               
-                                                <input type="submit" value="Register" id="register-btn"  class="form-control mb-4" style="width: 35%; float: right; cursor: pointer;">
-
-                                                <div class="alert border py-2 px-1 w-50 bg-warning d-none" id="register-alert">
-                                                        <b>Registration Succeessful !</b>
-                                                    </div> 
-                                            </form>
-                                    </div>
-                    
-                                </div>
-                            </div>
-                        </div>
-                </div>
-            </div>
-        </div>
+<div id="mike-div"> 
+        <i class="fa fa-microphone" id="mike-div-mike"></i>
     </div>
-    
-    <!-- Modal Coding End-->
 
-
+<!--Side Microphone Coding End-->
 
 
 <!-- Nav bar Coding Start-->
@@ -198,17 +42,17 @@
             <div class="collapse navbar-collapse justify-content-end mr-lg-5" id="open-menu"> 
                 <ul class="navbar-nav">
                     <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="#aboutus" class="nav-link">About us</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="#aboutus" id="aboutuslink" class="nav-link">About us</a></li>
+                    <li class="nav-item"><a href="#contactus" id="contactuslink" class="nav-link">Contact Us</a></li>
                     <li class="nav-item"><a href="#" class="nav-link">Gallery</a></li>
-                    <li class="nav-item"><a href="#mymodal" data-toggle="modal" class="nav-link">Login/Signup</a></li>
+                    <li class="nav-item"><a href="#mymodal" id="loginsignuplink" data-toggle="modal" class="nav-link">Login/Signup</a></li>
                     <li class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Contact us</a>
+                        <a href="#" id="servicesuslink" class="nav-link dropdown-toggle" data-toggle="dropdown">Services</a>
                         <div class="dropdown-menu">
                                 <ul class="list-inline mx-3">
-                                        <li><a href="#">Phone</a></li>
-                                        <li><a href="#">E-mail us</a></li>
-                                        <li><a href="#">Location</a></li>
+                                        <li><a href="#">Manage Food</a></li>
+                                        <li><a href="#">Waste Reduction</a></li>
+                                        <li><a href="#">Technologies</a></li>
                                 </ul>
                         </div>
                     </li>
@@ -252,10 +96,45 @@
     </div>
 
     
-    <div class="col-lg-4 bg-light">
-            <h3 class="text-center m-3 google-black-font exp-more">Explore More By...</h3>
-
-            
+    <div class="col-lg-4 bg-light px-lg-5 px-sm-4">
+            <h3 class="text-center m-3 google-black-font exp-more text-warning">News Update</h3>
+                <div class="mx-auto text-center border border-5 p-0 h-sm-50" style="overflow : hidden; height: 500px;" id="news-div">
+                    <marquee direction="up" scrolldelay="300" behavior="alternate">
+                        <ul class="my-3 mx-0" style="list-style: none; text-align: left;">
+                                <li>Jan Dhan Youjna</li>
+                                <hr color="red">
+                                <li>Swach Yojna<sup class="sup">*</sup></li>
+                                <hr color="red">
+                                <li>Jan Dhan Youjna<sup class="sup">*</sup></li>
+                                <hr color="red">
+                                <li>Agricultural Scheme</li>
+                                <hr color="red">
+                                <li>Swach Yojna</li>
+                                <hr color="red">
+                                <li>Jan Dhan Youjna<sup class="sup">*</sup></li>
+                                <hr color="red">
+                                <li>Swach Yojna</li>
+                                <hr color="red">
+                                <li>Jan Dhan Youjna</li>
+                                <hr color="red">
+                                <li>Swach Yojna</li>
+                                <hr color="red">
+                                <li>Jan Dhan Youjna<sup class="sup">*</sup></li>
+                                <hr color="red">
+                                <li>Swach Yojna</li>
+                                <hr color="red">
+                                <li>Jan Dhan Youjna</li>
+                                <hr color="red">
+                                <li>Swach Yojna</li>
+                                <hr color="red">
+                                <li>Jan Dhan Youjna<sup class="sup">*</sup></li>
+                                <hr color="red">
+                                <li>Swach Yojna</li>
+                                <hr color="red">
+                                <li>Jan Dhan Youjna</li>
+                            </ul>
+                        </marquee>
+                </div>
         </div>
     </div>
 
@@ -323,7 +202,7 @@
 
 <!-- Footer Coding Start-->
 
-<footer class="jumbotron bg-primary mb-0 rounded-0 mt-2 pb-2">
+<footer class="jumbotron bg-primary mb-0 rounded-0 mt-2 pb-2" id="footer">
 
     <div class="row">
         <div class="col-lg-9">
@@ -374,6 +253,170 @@
 </footer>
 
 <!-- Footer Coding End-->
+
+
+
+
+<!-- Modal Coding Start-->
+
+<div class="modal" id="mymodal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-dark text-light">
+                    Login/Register to Explore more..
+                    <i class="fa fa-times ml-auto" data-dismiss="modal" style="font-size: 30px; color: red; cursor: pointer;"></i>
+                </div>
+                <div class="modal-body p-0 m-0">
+                        <div class="container-fluid">
+                                <ul class="nav nav-tabs" role="tablist">
+                                    <li class="nav-item"><a href="#login" class="nav-link active" data-toggle="tab">Login</a></li>
+                                    <li class="nav-item"><a href="#register" class="nav-link" data-toggle="tab">Register</a></li>
+                                </ul>
+                    
+                                <div class="tab-content">
+                                    
+                                    <div id="login" class="container tab-pane active mt-3">
+                                       
+                                        <form>
+                                        <div class="input-group  my-4">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">
+                                                    <i class="fa fa-user" style="font-size: 30px;"></i>
+                                                </span>
+                                             </div>
+                                            <input type="text" name="username" class="form-control" placeholder="Username or Email" required="required">
+                                        </div>
+                    
+                                        <div class="input-group my-4">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">
+                                                        <i class="fa fa-key" style="font-size: 30px;"></i>
+                                                    </span>
+                                                 </div>
+                                                <input type="password" name="username" class="form-control" placeholder="Password" required="required">
+                                            </div>
+                                            
+                                             <input type="submit" value="Login" class="form-control mb-4" style="width: 35%; float: right;">
+                                    </form>
+                                    </div>
+                    
+                                    <div id="register" class="container tab-pane pb-4">
+                                            <form>
+                                            <div class="input-group  my-4">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text">
+                                                            <i class="fa fa-user" style="font-size: 30px;"></i>
+                                                        </span>
+                                                     </div>
+                                                    <input type="text" id="username" oninput="checkname();" class="form-control" placeholder="Full Name" required="required">
+                                                    <span id="spanname"></span>
+                                                </div>
+
+                                                <div class="input-group my-4">
+                                                        <div class="input-group-prepend">
+                                                            <span class="input-group-text">
+                                                                <i class="fa fa-envelope" style="font-size: 30px;"></i>
+                                                            </span>
+                                                         </div>
+                                                        <input type="email" id="useremail" oninput="checkemail();" class="form-control" placeholder="Email" required="required">
+                                                        <span id="spanemail"></span>
+                                                </div>
+
+                                                <div class="input-group my-4">
+                                                        <div class="input-group-prepend">
+                                                            <span class="input-group-text">
+                                                                <i class="fa fa-phone" style="font-size: 30px;"></i>
+                                                            </span>
+                                                         </div>
+                                                        <input type="number" id="usernumber" oninput="checknumber();" class="form-control" placeholder="Mobile Number" required="required">
+                                                        <span id="spannumber"></span>
+                                               </div>
+
+                                                <div class="input-group my-4">
+                                                        <div class="input-group-prepend">
+                                                                <span class="input-group-text">
+                                                                    <i class="fa fa-user" style="font-size: 30px;"></i>
+                                                                </span>
+                                                        </div>
+                                                    <span class="mx-md-4 py-2 radio-input-span form-control"><input type="radio" checked id="male" required="required" name="usergender">&nbsp;Male</span>
+                                                    <span class="mx-md-4 py-2 radio-input-span form-control"><input type="radio" id="female" required="required" name="usergender">&nbsp;Female</span>
+                                            
+                                                   </div>
+                                                
+
+                                                <div class="input-group my-4" required>
+                                                        
+                                                        <select id="userstate" class="form-control">
+                                                                <option value="">Select State</option>
+                                                                <option value="Delhi">Delhi</option>
+                                                                <option value="Punjab">Punjab</option>
+                                                                <option value="Rajasthan">Rajasthan</option>
+                                                                <option value="Kashmir">Kashmir</option>
+                                                                <option value="Laddhak">Laddhak</option>
+                                                                <option value="Assam">Assam</option>
+                                                                <option value="Mizoram">Mizoram</option>
+                                                                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                                                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                                                <option value="Goa">Goa</option>
+                                                                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                                                <option value="Kerala">Kerala</option>
+                                                                <option value="West Bengal">West Bengal</option>
+                                                                <option value="Karnatka">Karnatka</option>
+                                                                <option value="Maharastra">Maharastra</option>
+                                                                <option value="Haryana">Haryana</option>
+                                                                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                                                <option value="Gujarat">Gujarat</option>
+                                                                <option value="Chattisgarh">Chattisgarh</option>
+                                                                <option value="Uttrakhand">Uttrakhand</option>
+                                                                <option value="Jharkhand">Jharkhand</option>
+                                                                <option value="Sikkhim">Sikkhim</option>
+                                                                <option value="Meghalaya">Meghalaya</option>
+                                                                <option value="Telangana">Telangana</option>
+                                                        </select>
+
+                                                        <select class="form-control" id="userdistrict">
+                                                                <option value="">District</option>
+                                                                <option value="Ghaziabad">Ghaziabad</option>
+                                                                <option value="Saharnpur">Saharnpur</option>
+                                                                <option value="Aligarh">Aligarh</option>
+                                                                <option value="Hapur">Hapur</option>
+                                                            </select>
+                                                        
+                                                </div>
+                            
+                                                <div class="input-group my-4">
+                                                        <div class="input-group-prepend">
+                                                            <span class="input-group-text">
+                                                                <i class="fa fa-key" style="font-size: 30px;"></i>
+                                                            </span>
+                                                         </div>
+                                                        <input type="password" id="userpass" oninput="checkpass();" class="form-control" placeholder="Password" required="required">
+                                                        <span id="spanpass"></span>
+                                                </div>
+
+                                                <div class="input-group my-4">
+                                                        <div class="input-group-prepend">
+                                                            <span class="input-group-text">
+                                                                <i class="fa fa-key" style="font-size: 30px;"></i>
+                                                            </span>
+                                                         </div>
+                                                        <input type="password" id="usercpass" oninput="checkpass();" class="form-control" placeholder=" Confirm Password" required="required">
+                                                        <span id="spancpass"></span>
+                                               </div>
+                                               
+                                                <input type="submit" value="Register" id="register-btn"  class="form-control mb-4" style="width: 35%; float: right; cursor: pointer;">
+                                            </form>
+                                    </div>
+                    
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal Coding End-->
 
 
 
@@ -504,54 +547,11 @@ $(document).ready(function(){
                                                     },
                                             success : function(event){
                                                         alert(event);
-                                                        document.getElementById("register-alert").style.display = "block !important";
-                                                        setTimeout(function(){
-                                                            document.getElementById("register-alert").style.display = "none !important";
-                                                            document.getElementById("login").click();
-                                                        }, 3000)
-                                                    }
-                                            return false;
+                                                     }
                                         });
                                 }
                                 else
                                 {
-                                    alert("Fill C pass");
+                                    document.getElementById("usercpass").focus;
+                                    document.getElementById("usercpass").style.borderColor = "red";
                                 }
-                            }
-                            else
-                            {
-                                alert("Fill Pass");
-                            }
-                        }
-                        else
-                        {
-                            alert("Choose District");
-                        }
-                    }
-                    else
-                    {
-                        alert("Choose State");
-                    }
-                }
-                else
-                {
-                    alert("Fill Mobile Number");
-                }
-            }
-            else
-            {
-                alert("Fill User Email");
-            }
-         }
-        else{
-            alert("Fill Username");
-        }
-        
-    });
-});
-
-
-</script>
-
-</body>
-</html>
