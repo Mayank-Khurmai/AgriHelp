@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/responsive.css">
     <link href="https://fonts.googleapis.com/css?family=Black+Ops+One&display=swap" rel="stylesheet">
     <script src="js/jquery-1.9.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
+    <script src="js/popper.min.js"></skjcript>
     <script src="js/bootstrap.js"></script>
     <script src="js/all.js"></script>
     <script src="js/speech.js"></script>
