@@ -45,4 +45,22 @@ body{
     color: red; 
     font-weight: bold; 
     font-size: 15px;
-}
+    }
+
+#mike-div{
+        background-color: rgb(109, 216, 202);
+        width: 80px;
+        height: 85px;
+        border: 2px inset black;
+        border-top-right-radius: 20%;
+        border-bottom-right-radius: 20%;
+        position: fixed;
+        top: 50%;
+        z-index: 10;
+        cursor: pointer;
+    }
+
+#mike-div-mike{
+    font-size: 70px; 
+    margin: 10%;
+    }
