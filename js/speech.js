@@ -1,23 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    
-		<center><h1>Voice Recognition and Display System 2</h1></center>
-        <br><br>
-        <center><button id='btnGiveCommand'>Give Command!</button></center>
-        <br>
-        <h2 id="message"></h2>
-		
-    
-    
-    
-    <script>
         var message = document.querySelector('#message');
 
         var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
@@ -50,8 +30,3 @@
             recognition.start();
 
         });
-
-
-    </script>
-</body>
-</html>
